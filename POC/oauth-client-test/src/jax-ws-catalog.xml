@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://10.0.9.90:8081/wfe-nodes-interface/NodeServiceImpl?wsdl" uri="wsdl/10.0.9.90_8081/wfe-nodes-interface/NodeServiceImpl.wsdl"/>
+    <system systemId="http://10.0.9.90:8081/wfe-nodes-interface/NodeServiceImpl?wsdl=1" uri="wsdl/10.0.9.90_8081/wfe-nodes-interface/NodeServiceImpl.wsdl_1.wsdl"/>
+    <system systemId="http://10.0.9.90:8081/wfe-nodes-interface/NodeServiceImpl?xsd=1" uri="wsdl/10.0.9.90_8081/wfe-nodes-interface/NodeServiceImpl.xsd_1.xsd"/>
+</catalog>

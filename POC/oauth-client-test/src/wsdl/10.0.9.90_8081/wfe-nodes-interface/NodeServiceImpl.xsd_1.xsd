@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://node.imi.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://node.imi.com/">
+
+<xs:element name="PolicyException" nillable="true" type="tns:policy" />
+
+<xs:element name="ServiceException" nillable="true" type="tns:policy" />
+
+<xs:element name="execute" type="tns:execute" />
+
+<xs:element name="executeResponse" type="tns:executeResponse" />
+
+<xs:complexType name="execute">
+<xs:sequence>
+<xs:element name="nodeRequest" type="tns:NodeRequest" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NodeRequest">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="flowId" type="xs:string" minOccurs="0" />
+<xs:element name="userId" type="xs:string" minOccurs="0" />
+<xs:element name="sessionKey" type="xs:string" minOccurs="0" />
+<xs:element name="maps" type="tns:Maps" minOccurs="0" />
+<xs:element name="params" type="tns:Params" minOccurs="0" />
+<xs:element name="events" type="tns:Events" minOccurs="0" />
+<xs:element name="options" type="tns:Options" minOccurs="0" />
+<xs:element name="datas" type="tns:Datas" minOccurs="0" />
+<xs:element name="queries" type="tns:Queries" minOccurs="0" />
+<xs:element name="inHeader" type="tns:Headers" minOccurs="0" />
+<xs:element name="outHeader" type="tns:Headers" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Maps">
+<xs:sequence>
+<xs:element name="Map" type="tns:Map" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Map">
+<xs:sequence>
+<xs:element name="key" type="xs:string" />
+<xs:element name="value" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Params">
+<xs:sequence>
+<xs:element name="Param" type="tns:Param" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Param">
+<xs:sequence>
+<xs:element name="name" type="xs:string" nillable="true" />
+<xs:element name="value" type="xs:string" nillable="true" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Events">
+<xs:sequence>
+<xs:element name="Event" type="tns:Event" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Event">
+<xs:sequence>
+<xs:element name="name" type="xs:string" />
+<xs:element name="next" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Options">
+<xs:sequence>
+<xs:element name="Option" type="tns:Data" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Data">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="value" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Datas">
+<xs:sequence>
+<xs:element name="Data" type="tns:Data" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Queries">
+<xs:sequence>
+<xs:element name="Query" type="tns:Data" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Headers">
+<xs:sequence>
+<xs:element name="Header" type="tns:Data" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodeResponse" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nodeResponse">
+<xs:sequence>
+<xs:element name="eventName" type="xs:string" minOccurs="0" />
+<xs:element name="maps" type="tns:Maps" minOccurs="0" />
+<xs:element name="nextId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="policy">
+<xs:sequence>
+<xs:element name="status" type="xs:string" minOccurs="0" />
+<xs:element name="text" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
